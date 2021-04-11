@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_ua"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@+id/input_layout_ub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="电压A">
+
+        <EditText
+            android:id="@+id/et_ua"
+            android:inputType="numberDecimal"
+            android:text="250"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_ub"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@+id/input_layout_ua"
+        app:layout_constraintEnd_toStartOf="@+id/input_layout_uc"
+        android:layout_height="wrap_content"
+        android:hint="电压B">
+
+        <EditText
+            android:id="@+id/et_ub"
+            android:inputType="numberDecimal"
+            android:text="125"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_uc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/input_layout_ub"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="电压C">
+
+        <EditText
+            android:id="@+id/et_uc"
+            android:text="200"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_ia"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_ua"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@+id/input_layout_ub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="电流A">
+
+        <EditText
+            android:id="@+id/et_ia"
+            android:text="7.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_ib"
+        app:layout_constraintTop_toTopOf="@+id/input_layout_ia"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@+id/input_layout_ia"
+        app:layout_constraintEnd_toStartOf="@+id/input_layout_ic"
+        android:layout_height="wrap_content"
+        android:hint="电流B">
+
+        <EditText
+            android:id="@+id/et_ib"
+            android:text="3.6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_ic"
+        app:layout_constraintTop_toTopOf="@+id/input_layout_ia"
+        app:layout_constraintStart_toEndOf="@+id/input_layout_ib"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="电流C">
+
+        <EditText
+            android:id="@+id/et_ic"
+            android:text="4.8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_angleA"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_ia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@+id/input_layout_angleB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="电压电流角度A">
+
+        <EditText
+            android:id="@+id/et_angelA"
+            android:text="-20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_angleB"
+        app:layout_constraintTop_toTopOf="@+id/input_layout_angleA"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@+id/input_layout_ia"
+        app:layout_constraintEnd_toStartOf="@+id/input_layout_ic"
+        android:layout_height="wrap_content"
+        android:hint="电压电流角度B">
+
+        <EditText
+            android:id="@+id/et_angelB"
+            android:text="20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_angleC"
+        app:layout_constraintTop_toTopOf="@+id/input_layout_angleA"
+        app:layout_constraintStart_toEndOf="@+id/input_layout_ib"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="电压电流角度C">
+
+        <EditText
+            android:id="@+id/et_angelC"
+            android:text="-10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_create_chart"
+        android:layout_width="match_parent"
+        android:text="createChart"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_angleA"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content"/>
+
+    <com.leevinapp.chartdeom.ChartView
+        android:id="@+id/chart_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
